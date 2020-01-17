@@ -22,8 +22,6 @@
     },
     {
       "packageNames": [
-        "@capraconsulting/sentry-utils-js",
-        "@capraconsulting/validation-utils-js",
         "autoprefixer",
         "black",
         "flake8",
@@ -75,5 +73,6 @@
   "semanticCommits": true,
   "stabilityDays": 3,
   "prNotPendingHours": 74,
-  "timezone": "Europe/Oslo"
+  "timezone": "Europe/Oslo",
+  "branchPrefix": "deps-"  
 }
