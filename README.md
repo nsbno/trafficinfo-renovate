@@ -12,7 +12,7 @@ for a complete list of possible options.
 
 ```json
 {
-  "extends": ["github>capraconsulting/renovate-config:default"]
+  "extends": ["github> nsbno/trafficinfo-renovate:default"]
 }
 ```
 
