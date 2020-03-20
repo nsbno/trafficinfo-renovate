@@ -10,6 +10,12 @@
   "masterIssueAutoclose": true,
   "packageRules": [
     {
+      "packagePatterns": [
+        "^no.cantara.aws:sqs-util"
+      ],
+      "enabled": false
+    },
+    {
       "packageNames": [
         "boto3",
         "aws-sdk"
