@@ -72,6 +72,12 @@
     },
     {
       "packagePatterns": [
+        "^org.jetbrains.kotlin."
+      ],
+      "groupName": "jetbrain kotlin packages"
+    },
+    {
+      "packagePatterns": [
         "^software.amazon.awssdk:"
       ],
       "groupName": "aws-sdk-java-v2 monorepo"
