@@ -66,6 +66,12 @@
     },
     {
       "packagePatterns": [
+        "^org.junit."
+      ],
+      "groupName": "junit packages"
+    },
+    {
+      "packagePatterns": [
         "^software.amazon.awssdk:"
       ],
       "groupName": "aws-sdk-java-v2 monorepo"
