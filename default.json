@@ -21,6 +21,7 @@
         "aws-sdk"
       ],
       "packagePatterns": [
+        "^com.amazonaws:aws-java-sdk-",
         "^com.amazonaws:java-sdk-",
         "^software.amazon.awssdk:"
       ],
