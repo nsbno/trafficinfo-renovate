@@ -61,6 +61,12 @@
     },
     {
       "packagePatterns": [
+        "^org.mock-server."
+      ],
+      "groupName": "mock-server packages"
+    },
+    {
+      "packagePatterns": [
         "^com.fasterxml.jackson."
       ],
       "groupName": "jackson packages"
