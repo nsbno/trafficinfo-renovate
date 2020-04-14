@@ -94,7 +94,14 @@
         "^software.amazon.awssdk:"
       ],
       "groupName": "aws-sdk-java-v2 monorepo"
+    ,
+    {
+      "packagePatterns": [
+        "^io.arrow-kt"
+      ],
+      "groupName": "arrow kt packages"
     }
+}
   ],
   "pin": {
     "automerge": true
