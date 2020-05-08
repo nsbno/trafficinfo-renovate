@@ -100,8 +100,13 @@
         "^io.arrow-kt"
       ],
       "groupName": "arrow kt packages"
+    },
+    {
+      "packagePatterns": [
+        "^org.apache.kafka"
+      ],
+      "groupName": "apache kafka packages"
     }
-
   ],
   "pin": {
     "automerge": true
