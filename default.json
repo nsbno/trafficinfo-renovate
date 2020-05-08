@@ -112,5 +112,15 @@
   "stabilityDays": 3,
   "prNotPendingHours": 74,
   "timezone": "Europe/Oslo",
-  "branchPrefix": "deps-"  
+  "branchPrefix": "deps-",
+  "encrypted": {
+    "nexusPassword": "j2X2O6lfig3lfScFAIqfd6A41Y+Ad70ZtntT2s6c3CelJS2pKsAKjulcJO0ua8AkmCglFfhYW4furpGkpC7+6QOK5SbJsjP705XQvYiz8bh+bMCcO6MBewCPzCj7KIxFCxshVMO5nJQAMjLh+OrVCqknRDISP4M1IyOx2kfILMNIsdr285YtFlySEgkQLRWhEjbDuVbAzzqG5CR510DqaaZJ79T1DSqBN6B5JQ9RaLUfzTFM48BGeo6VjfJnDOBcpbJrh6lZgO23+Ae7y3YajJdK4jz0TFfGU9VGGTWSWTseF7D+CCJ/+oX2Kx3DfBwhgduCpXzRXD+Sg/10CqIowA=="
+  },
+  "hostRules": [
+    {
+      "domainName": "nexus.common-services.vydev.io",
+      "username": "renovate",
+      "password": "$NEXUS_PASSWORD"
+    }
+  ]
 }
