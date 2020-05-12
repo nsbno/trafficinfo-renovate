@@ -118,15 +118,14 @@
   "prNotPendingHours": 74,
   "timezone": "Europe/Oslo",
   "branchPrefix": "deps-",
-  "encrypted": {
-    "nexusPassword": "KhsrsteA3SyRNxyVkP0RONBW5j4/uJBsg6W/HXJrDCtqVnNq0BnJcwFt84Z675DhivLJSpMEH+LhgNJDN1R9wKD0Gq8cNo3t6j57wdq/sM8xG2NrSUWJAURlG+w69lrUrlHI85EBwPb9kji5EKwbKIbuMaYL8MIEgl6XT4W3rbkdW8t9e1dDPE9NpjVURhUjrigU0EaoT6qq2azv1VUogoByT9CeAXxROqYEEJ/3k8Fxy2jyvHU9XCh7sxSpjIwDL0nXeitz9nlyCDQMx7qAjM1gkEtHlcFzAjGaATGDSzZBkqntmikYbaTogqtEQIsmsy4E8oDttUCVFM9MnsfrSg=="
-  },
   "hostRules": [
     {
       "platform": "maven",
       "endpoint": "https://nexus.common-services.vydev.io",
       "username": "renovate",
-      "password": "${NEXUS_PASSWORD}"
+      "encrypted": {
+        "password": "KhsrsteA3SyRNxyVkP0RONBW5j4/uJBsg6W/HXJrDCtqVnNq0BnJcwFt84Z675DhivLJSpMEH+LhgNJDN1R9wKD0Gq8cNo3t6j57wdq/sM8xG2NrSUWJAURlG+w69lrUrlHI85EBwPb9kji5EKwbKIbuMaYL8MIEgl6XT4W3rbkdW8t9e1dDPE9NpjVURhUjrigU0EaoT6qq2azv1VUogoByT9CeAXxROqYEEJ/3k8Fxy2jyvHU9XCh7sxSpjIwDL0nXeitz9nlyCDQMx7qAjM1gkEtHlcFzAjGaATGDSzZBkqntmikYbaTogqtEQIsmsy4E8oDttUCVFM9MnsfrSg=="
+      }
     }
   ]
 }
