@@ -123,7 +123,8 @@
   },
   "hostRules": [
     {
-      "domainName": "nexus.common-services.vydev.io",
+      "platform": "maven",
+      "endpoint": "https://nexus.common-services.vydev.io",
       "username": "renovate",
       "password": "${NEXUS_PASSWORD}"
     }
