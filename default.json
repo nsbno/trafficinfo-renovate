@@ -85,7 +85,13 @@
         "^org.jetbrains.kotlin."
       ],
       "groupName": "jetbrain kotlin packages",
-      "automerge": false
+      "minor": {
+        "automerge": false
+      },
+      "patch": {
+        "automerge": true
+      },
+      "separateMinorPatch": true
     },
     {
       "packagePatterns": [
