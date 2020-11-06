@@ -116,12 +116,6 @@
         "^org.apache.kafka"
       ],
       "groupName": "apache kafka packages"
-    },
-    {
-      "packagePatterns": [
-        "^io.micronaut"
-      ],
-      "groupName": "micronaut packages"
     }
   ],
   "pin": {
