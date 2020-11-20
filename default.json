@@ -7,6 +7,9 @@
     "automerge": false
   },
   "minor": {
+    "automerge": false
+  },
+  "patch": {
     "automerge": true
   },
   "masterIssue": true,
