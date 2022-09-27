@@ -12,6 +12,19 @@
   "patch": {
     "automerge": true
   },
+  "ignoreModulesAndTests": {
+    "description":
+    "Ignore `node_modules`, `bower_components`, `vendor` and various test/tests directories",
+    "ignorePaths": [
+      "**/node_modules/**",
+      "**/bower_components/**",
+      "**/vendor/**",
+      "**/examples/**",
+      "**/__tests__/**",
+      "**/tests/**",
+      "**/__fixtures__/**"
+    ]
+  },
   "masterIssue": true,
   "masterIssueAutoclose": true,
   "packageRules": [
