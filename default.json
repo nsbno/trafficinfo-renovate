@@ -1,5 +1,7 @@
 {
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:base"],
+  "labels": ["renovate"],
   "lockFileMaintenance": {
     "enabled": true
   },
@@ -16,16 +18,11 @@
   "masterIssueAutoclose": true,
   "packageRules": [
     {
-      "packagePatterns": [
-        "^no.cantara.aws:sqs-util"
-      ],
+      "packagePatterns": ["^no.cantara.aws:sqs-util"],
       "enabled": false
     },
     {
-      "packageNames": [
-        "boto3",
-        "aws-sdk"
-      ],
+      "packageNames": ["boto3", "aws-sdk"],
       "packagePatterns": [
         "^com.amazonaws:aws-java-sdk-",
         "^com.amazonaws:java-sdk-",
@@ -66,27 +63,19 @@
       "automergeType": "branch"
     },
     {
-      "packagePatterns": [
-        "^org.mock-server."
-      ],
+      "packagePatterns": ["^org.mock-server."],
       "groupName": "mock-server packages"
     },
     {
-      "packagePatterns": [
-        "^com.fasterxml.jackson."
-      ],
+      "packagePatterns": ["^com.fasterxml.jackson."],
       "groupName": "jackson packages"
     },
     {
-      "packagePatterns": [
-        "^org.junit."
-      ],
+      "packagePatterns": ["^org.junit."],
       "groupName": "junit packages"
     },
     {
-      "packagePatterns": [
-        "^org.jetbrains.kotlin."
-      ],
+      "packagePatterns": ["^org.jetbrains.kotlin."],
       "groupName": "jetbrain kotlin packages",
       "minor": {
         "automerge": false
@@ -97,27 +86,19 @@
       "separateMinorPatch": true
     },
     {
-      "packagePatterns": [
-        "^org.testcontainers."
-      ],
+      "packagePatterns": ["^org.testcontainers."],
       "groupName": "testcontainers packages"
     },
     {
-      "packagePatterns": [
-        "^software.amazon.awssdk:"
-      ],
+      "packagePatterns": ["^software.amazon.awssdk:"],
       "groupName": "aws-sdk-java-v2 monorepo"
     },
     {
-      "packagePatterns": [
-        "^io.arrow-kt"
-      ],
+      "packagePatterns": ["^io.arrow-kt"],
       "groupName": "arrow kt packages"
     },
     {
-      "packagePatterns": [
-        "^org.apache.kafka"
-      ],
+      "packagePatterns": ["^org.apache.kafka"],
       "groupName": "apache kafka packages"
     }
   ],
@@ -126,7 +107,7 @@
   },
   "prCreation": "not-pending",
   "schedule": ["before 6am on Monday"],
-  "semanticCommits": true,
+  "semanticCommits": "enabled",
   "stabilityDays": 3,
   "prNotPendingHours": 74,
   "timezone": "Europe/Oslo",
