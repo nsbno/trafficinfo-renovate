@@ -10,7 +10,7 @@ for a complete list of possible options.
 
 ```json
 {
-  "extends": ["github> nsbno/vydev-renovate:default"]
+  "extends": ["github> nsbno/trafficinfo-renovate:default"]
 }
 ```
 

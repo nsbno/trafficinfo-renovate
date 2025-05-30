@@ -4,7 +4,7 @@
   "description": "Renovate config for Vy projects.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nsbno/vydev-renovate.git"
+    "url": "git+https://github.com/nsbno/trafficinfo-renovate.git"
   },
   "author": "Vydev",
   "license": "Apache 2.0",
