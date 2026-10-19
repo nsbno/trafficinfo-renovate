@@ -1,7 +1,28 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:recommended"],
-  "labels": ["renovate"],
+  "extends": [
+    "config:recommended"
+  ],
+  "labels": [
+    "renovate"
+  ],
+  "timezone": "Europe/Oslo",
+  "schedule": [
+    "* 0-6 * * 1-5"
+  ],
+  "prHourlyLimit": 2,
+  "prConcurrentLimit": 10,
+  "minimumReleaseAge": "14 days",
+  "vulnerabilityAlerts": {
+    "addLabels": [
+      "security"
+    ],
+    "minimumReleaseAge": null
+  },
+  "prCreation": "immediate",
+  "semanticCommits": "enabled",
+  "internalChecksFilter": "strict",
+  "branchPrefix": "deps-",
   "lockFileMaintenance": {
     "enabled": true
   },
@@ -14,24 +35,41 @@
   "patch": {
     "automerge": true
   },
-  "masterIssue": true,
-  "masterIssueAutoclose": true,
+  "dependencyDashboardAutoclose": true,
   "packageRules": [
     {
-      "packagePatterns": ["^no.cantara.aws:sqs-util"],
+      "matchPackageNames": [
+        "/^no\\.vy\\./",
+        "/^nsbno//"
+      ],
+      "minimumReleaseAge": null
+    },
+    {
+      "matchDepNames": [
+        "/^github\\.com/nsbno//"
+      ],
+      "minimumReleaseAge": null
+    },
+    {
+      "matchPackageNames": [
+        "/^no\\.cantara\\.aws:sqs-util/"
+      ],
       "enabled": false
     },
     {
-      "packageNames": ["boto3", "aws-sdk"],
-      "packagePatterns": [
-        "^com.amazonaws:aws-java-sdk-",
-        "^com.amazonaws:java-sdk-",
-        "^software.amazon.awssdk:"
+      "matchPackageNames": [
+        "boto3",
+        "aws-sdk",
+        "/^com\\.amazonaws:aws-java-sdk-/",
+        "/^com\\.amazonaws:java-sdk-/",
+        "/^software\\.amazon\\.awssdk:/"
       ],
-      "extends": ["schedule:monthly"]
+      "schedule": [
+        "* 0-6 1-7 * *"
+      ]
     },
     {
-      "packageNames": [
+      "matchPackageNames": [
         "autoprefixer",
         "black",
         "flake8",
@@ -48,75 +86,78 @@
         "typescript",
         "webpack-cli",
         "webpack-dev-server",
-        "webpack"
+        "webpack",
+        "/^@types//",
+        "/^@typescript-eslint//",
+        "/^tslint/",
+        "/^eslint/",
+        "/-loader$/",
+        "/-webpack-plugin$/",
+        "/^rollup/"
       ],
-      "packagePatterns": [
-        "^@types/",
-        "^@typescript-eslint/",
-        "^tslint",
-        "^eslint",
-        "-loader$",
-        "-webpack-plugin$",
-        "^rollup"
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
       ],
-      "automerge": true,
-      "automergeType": "pr"
+      "automerge": true
     },
     {
-      "packagePatterns": ["^org.mock-server."],
+      "matchPackageNames": [
+        "/^org\\.mock-server\\./"
+      ],
       "groupName": "mock-server packages"
     },
     {
-      "packagePatterns": ["^com.fasterxml.jackson."],
+      "matchPackageNames": [
+        "/^com\\.fasterxml\\.jackson\\./"
+      ],
       "groupName": "jackson packages"
     },
     {
-      "packagePatterns": ["^org.junit."],
+      "matchPackageNames": [
+        "/^org\\.junit\\./"
+      ],
       "groupName": "junit packages"
     },
     {
-      "packagePatterns": ["^org.jetbrains.kotlin."],
+      "matchPackageNames": [
+        "/^org\\.jetbrains\\.kotlin\\./"
+      ],
       "groupName": "jetbrain kotlin packages",
-      "minor": {
-        "automerge": false
-      },
-      "patch": {
-        "automerge": true
-      },
       "separateMinorPatch": true
     },
     {
-      "packagePatterns": ["^org.testcontainers."],
+      "matchPackageNames": [
+        "/^org\\.testcontainers\\./"
+      ],
       "groupName": "testcontainers packages"
     },
     {
-      "packagePatterns": ["^software.amazon.awssdk:"],
+      "matchPackageNames": [
+        "/^software\\.amazon\\.awssdk:/"
+      ],
       "groupName": "aws-sdk-java-v2 monorepo"
     },
     {
-      "packagePatterns": ["^io.arrow-kt"],
+      "matchPackageNames": [
+        "/^io\\.arrow-kt/"
+      ],
       "groupName": "arrow kt packages"
     },
     {
-      "packagePatterns": ["^org.apache.kafka"],
+      "matchPackageNames": [
+        "/^org\\.apache\\.kafka/"
+      ],
       "groupName": "apache kafka packages"
     }
   ],
   "pin": {
     "automerge": true
   },
-  "prCreation": "immediate",
-  "schedule": ["on Sunday", "before 6am on Monday"],
-  "semanticCommits": "enabled",
-  "minimumReleaseAge": "3 days",
-  "internalChecksFilter": "strict",
-  "prNotPendingHours": 74,
-  "timezone": "Europe/Oslo",
-  "branchPrefix": "deps-",
   "hostRules": [
     {
-      "platform": "maven",
-      "endpoint": "https://nexus.common-services.vydev.io",
+      "hostType": "maven",
+      "matchHost": "https://nexus.common-services.vydev.io",
       "username": "github-actions-read",
       "password": "{{ secrets.NEXUS_GHA_READ_USER }}"
     }
