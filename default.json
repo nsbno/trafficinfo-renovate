@@ -23,6 +23,14 @@
   "semanticCommits": "enabled",
   "internalChecksFilter": "strict",
   "branchPrefix": "deps-",
+  "ignorePaths": [
+    "**/node_modules/**",
+    "**/bower_components/**",
+    "**/vendor/**",
+    "**/examples/**",
+    "**/__tests__/**",
+    "**/__fixtures__/**"
+  ],
   "lockFileMaintenance": {
     "enabled": true
   },
